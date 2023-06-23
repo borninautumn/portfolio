@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+}
+.header .header__inner {
+  width: 1200px;
+  height: 100px;
+}
+
+.visual {
+  background: gray;
+  height: 100vh;
+}/*# sourceMappingURL=index.css.map */
