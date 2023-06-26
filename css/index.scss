@@ -10,7 +10,9 @@ $background-color: #ffffff;
 // header css
 .header {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
     background: $background-color;
 
@@ -45,17 +47,61 @@ $background-color: #ffffff;
 .visual {
     position: relative;
     height: 100vh;
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    overflow: hidden;
 
-    .visual__inner {
-        width: 1200px;
-        height: inherit;
-        margin: 0 auto;
+    .visual__ocean {
+        height: 5%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #015871;
+
+        .wave {
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+            position: absolute;
+            top: -198px;
+            width: 6400px;
+            height: 198px;
+            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .wave:nth-of-type(2) {
+            top: -175px;
+            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+            opacity: 1;
+        }
+
+        @keyframes wave {
+            0% {
+                margin-left: 0;
+            }
+
+            100% {
+                margin-left: -1600px;
+            }
+        }
+
+        @keyframes swell {
+
+            0%,
+            100% {
+                transform: translate3d(0, -25px, 0);
+            }
+
+            50% {
+                transform: translate3d(0, 5px, 0);
+            }
+        }
     }
 
     .visual__text {
         font-size: 1.5em;
         position: absolute;
-        top: 50%; left: 50%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         font-size: 48px;
@@ -69,43 +115,52 @@ $background-color: #ffffff;
 
     .visual__scroll {
         position: absolute;
-        bottom: 20px; left: 50%;
+        bottom: 20px;
+        left: 50%;
         transform: translateX(-50%);
     }
 
     .scroll__circle {
         position: absolute;
-        bottom: 20px; left: 50%;
+        bottom: 20px;
+        left: 50%;
         transform: translateX(-50%);
-        width: 50px; height: 50px;
+        width: 50px;
+        height: 50px;
         border: 2px solid #c0cad6;
         border-radius: 45px;
 
         .arrow {
-            width: 25px; height: 25px;
+            width: 25px;
+            height: 25px;
             position: absolute;
-            top: 50%; left: 50%;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             // transition: all 0.5s;
             animation: arrowAni 1s infinite;
             border-radius: 50%;
         }
-    
+
         .arrow::before {
             content: '';
-            width: 1.5px; height: 20px;
+            width: 1.5px;
+            height: 20px;
             background: #c0cad6;
             position: absolute;
-            top: 0; left: 5px;
+            top: 0;
+            left: 5px;
             transform: rotate(-45deg);
         }
-    
+
         .arrow::after {
             content: '';
-            width: 1.5px; height: 20px;
+            width: 1.5px;
+            height: 20px;
             background: #c0cad6;
             position: absolute;
-            top: 0; right: 5px;
+            top: 0;
+            right: 5px;
             transform: rotate(45deg);
         }
     }
