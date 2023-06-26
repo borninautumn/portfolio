@@ -43,7 +43,61 @@ $background-color: #ffffff;
 }
 
 .visual {
+    position: relative;
     height: 100vh;
+
+    .visual__scroll {
+        position: absolute;
+        bottom: 20px; left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .scroll__circle {
+        position: absolute;
+        bottom: 20px; left: 50%;
+        transform: translateX(-50%);
+        width: 50px; height: 50px;
+        border: 2px solid #c0cad6;
+        border-radius: 45px;
+
+        .arrow {
+            width: 25px; height: 25px;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            // transition: all 0.5s;
+            animation: arrowAni 1s infinite;
+            border-radius: 50%;
+        }
+    
+        .arrow::before {
+            content: '';
+            width: 1.5px; height: 20px;
+            background: #c0cad6;
+            position: absolute;
+            top: 0; left: 5px;
+            transform: rotate(-45deg);
+        }
+    
+        .arrow::after {
+            content: '';
+            width: 1.5px; height: 20px;
+            background: #c0cad6;
+            position: absolute;
+            top: 0; right: 5px;
+            transform: rotate(45deg);
+        }
+    }
+
+    
+
+    
+}
+
+@keyframes arrowAni {
+    to {
+        top: 60%;
+    }
 }
 
 // footer css
