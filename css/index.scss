@@ -1,17 +1,63 @@
 $font-color: #333333;
 $background-color: #ffffff;
 
+* {
+    font-family: 'Raleway', 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    color: $font-color;
+}
+
+// header css
 .header {
-    width: 100%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 999;
+    background: $background-color;
 
     .header__inner {
         width: 1200px;
-        height: 100px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .header__logo {
+        float: left;
+        margin: 15px 0;
+    }
+
+    .logo {
+        font-size: 30px;
+        text-decoration: none;
+        letter-spacing: 0.2em;
+        transition: all 0.5s;
+
+        span {
+            font-weight: 700;
+            color: #bd274a;
+        }
+    }
+
+    .logo:hover {
+        letter-spacing: 0.1em;
     }
 }
 
 .visual {
-    background: gray;
     height: 100vh;
 }
 
+// footer css
+.footer {
+    background-color: #c0cad6;
+    height: 100px;
+
+    .footer__copyright {
+        text-align: center;
+        line-height: 22px;
+        padding-top: 25px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+}

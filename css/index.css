@@ -1,12 +1,53 @@
+* {
+  font-family: "Raleway", "Noto Sans KR", sans-serif;
+  font-size: 17px;
+  color: #333333;
+}
+
 .header {
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #ffffff;
 }
 .header .header__inner {
   width: 1200px;
-  height: 100px;
+  height: 80px;
+  margin: 0 auto;
+}
+.header .header__logo {
+  float: left;
+  margin: 15px 0;
+}
+.header .logo {
+  font-size: 30px;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  transition: all 0.5s;
+}
+.header .logo span {
+  font-weight: 700;
+  color: #bd274a;
+}
+.header .logo:hover {
+  letter-spacing: 0.1em;
 }
 
 .visual {
-  background: gray;
   height: 100vh;
+}
+
+.footer {
+  background-color: #c0cad6;
+  height: 100px;
+}
+.footer .footer__copyright {
+  text-align: center;
+  line-height: 22px;
+  padding-top: 25px;
+}
+.footer .footer__copyright span {
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */
