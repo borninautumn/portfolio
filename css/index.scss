@@ -46,6 +46,27 @@ $background-color: #ffffff;
     position: relative;
     height: 100vh;
 
+    .visual__inner {
+        width: 1200px;
+        height: inherit;
+        margin: 0 auto;
+    }
+
+    .visual__text {
+        font-size: 1.5em;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 48px;
+
+        span {
+            font-size: 72px;
+            line-height: 100px;
+            font-weight: 500;
+        }
+    }
+
     .visual__scroll {
         position: absolute;
         bottom: 20px; left: 50%;
@@ -88,10 +109,6 @@ $background-color: #ffffff;
             transform: rotate(45deg);
         }
     }
-
-    
-
-    
 }
 
 @keyframes arrowAni {
