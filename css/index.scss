@@ -1,7 +1,10 @@
 $font-color: #333333;
 $background-color: #ffffff;
 
-* {
+html,
+body {
+    background: $background-color;
+    min-height: 100%;
     font-family: 'Raleway', 'Noto Sans KR', sans-serif;
     font-size: 17px;
     color: $font-color;
@@ -14,7 +17,6 @@ $background-color: #ffffff;
     left: 0;
     right: 0;
     z-index: 999;
-    background: $background-color;
 
     .header__inner {
         width: 1200px;
@@ -37,64 +39,30 @@ $background-color: #ffffff;
             font-weight: 700;
             color: #bd274a;
         }
+
+        &:hover {
+            letter-spacing: 0.1em;
+        }
     }
 
-    .logo:hover {
-        letter-spacing: 0.1em;
+    .on {
+        border-bottom: 2px solid #f2f2f2;
     }
 }
 
+// visual css
 .visual {
     position: relative;
     height: 100vh;
-    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    background-image: url(https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-repeat: no-repeat;
     overflow: hidden;
 
-    .visual__ocean {
-        height: 5%;
-        width: 100%;
+    .wave {
         position: absolute;
-        bottom: 0;
+        bottom: -4px;
         left: 0;
-        background: #015871;
-
-        .wave {
-            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
-            position: absolute;
-            top: -198px;
-            width: 6400px;
-            height: 198px;
-            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-            transform: translate3d(0, 0, 0);
-        }
-
-        .wave:nth-of-type(2) {
-            top: -175px;
-            animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-            opacity: 1;
-        }
-
-        @keyframes wave {
-            0% {
-                margin-left: 0;
-            }
-
-            100% {
-                margin-left: -1600px;
-            }
-        }
-
-        @keyframes swell {
-
-            0%,
-            100% {
-                transform: translate3d(0, -25px, 0);
-            }
-
-            50% {
-                transform: translate3d(0, 5px, 0);
-            }
-        }
+        right: 0;
     }
 
     .visual__text {
@@ -105,6 +73,7 @@ $background-color: #ffffff;
         transform: translate(-50%, -50%);
         text-align: center;
         font-size: 48px;
+        color: #f2f2f2;
 
         span {
             font-size: 72px;
@@ -128,7 +97,7 @@ $background-color: #ffffff;
         width: 50px;
         height: 50px;
         border: 2px solid #c0cad6;
-        border-radius: 45px;
+        border-radius: 50%;
 
         .arrow {
             width: 25px;
@@ -137,41 +106,71 @@ $background-color: #ffffff;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            // transition: all 0.5s;
             animation: arrowAni 1s infinite;
             border-radius: 50%;
+
+            &:before,
+            &:after {
+                content: '';
+                width: 1.5px;
+                height: 20px;
+                background: #c0cad6;
+                position: absolute;
+            }
+
+            &:before {
+                top: 0;
+                left: 5px;
+                transform: rotate(-45deg);
+            }
+
+            &:after {
+                top: 0;
+                right: 5px;
+                transform: rotate(45deg);
+            }
         }
 
-        .arrow::before {
-            content: '';
-            width: 1.5px;
-            height: 20px;
-            background: #c0cad6;
-            position: absolute;
-            top: 0;
-            left: 5px;
-            transform: rotate(-45deg);
-        }
-
-        .arrow::after {
-            content: '';
-            width: 1.5px;
-            height: 20px;
-            background: #c0cad6;
-            position: absolute;
-            top: 0;
-            right: 5px;
-            transform: rotate(45deg);
+        @keyframes arrowAni {
+            to {
+                top: 60%;
+            }
         }
     }
 }
 
-@keyframes arrowAni {
-    to {
-        top: 60%;
+// about css
+.about {
+    .about__inner {
+        width: 1200px; height: inherit;
+        margin: 100px auto;
+        background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+
+    .about__button {
+        border: 0;
+        width: 200px; height: 60px;
+        border-radius: 15px;
+        color: #ffffff;
+        background-color: #bd274a;
     }
 }
 
+// work css
+.work {
+    height: 100vh;
+
+    .work__inner {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .work__item {
+        width: 300px; height: 300px;
+        border: 1px solid red;
+        float: left;
+    }
+}
 // footer css
 .footer {
     background-color: #c0cad6;
@@ -186,4 +185,11 @@ $background-color: #ffffff;
             font-weight: 600;
         }
     }
+}
+
+// blind css
+.blind {
+    width: 1px; height: 1px;
+    opacity: 0;
+    z-index: -9999;
 }
