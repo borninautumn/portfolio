@@ -132,15 +132,12 @@ body {
   background-color: #bd274a;
 }
 
-.work {
-  height: 100vh;
-}
 .work .work__inner {
   width: 1200px;
   margin: 0 auto;
 }
 .work .work__item {
-  width: 300px;
+  width: 100%;
   height: 300px;
   border: 1px solid red;
   float: left;
