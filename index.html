@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <!-- import aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -20,9 +22,18 @@
                 <span class="blind">로고</span>
             </div>
             <nav class="nav">
-                <a href="mailto:iampsi@naver.com" class="nav__mail"><span>email</span></a>
-                <a href="#" class="nav__github"><span>github</span></a>
-                <a href="#" class="nav__blog"><span>blog</span></a>
+                <a href="mailto:iampsi@naver.com" class="nav__mail">
+                    <i class="fa-solid fa-envelope fa-2x"></i>
+                    <span class="blind">email</span>
+                </a>
+                <a href="https://github.com/borninautumn" class="nav__github">
+                    <i class="fa-brands fa-square-github"></i>
+                    <span class="blind">github</span>
+                </a>
+                <a href="https://blog.naver.com/chestnxt" class="nav__blog">
+                    <i class="fa-brands fa-blogger"></i>
+                    <span class="blind">blog</span>
+                </a>
             </nav>
         </div>
     </header>
@@ -41,8 +52,10 @@
                 </path>
             </svg>
         </div>
-        <div class="visual__text"><span>Song polio,</span><br />A publisher who learns, <br />thinks, and works with
-            pleasure</div>
+        <div class="visual__text">
+            <p data-aos="fade-down"><span>Song polio,</span><br />A publisher who learns, <br />thinks, and works with
+            pleasure</p>
+        </div>
         <div class="visual__scroll">
             <div class="scroll__circle">
                 <div class="arrow"></div>
@@ -51,13 +64,13 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" data-aos="fade-in">
         <div class="about__inner">
             <div class="about__text">
-                <h2>ABOUT ME</h2>
+                <h2><span>\</span> ABOUT ME</h2>
                 <p>안녕하세요, 웹 퍼블리셔 박송이입니다.<br />웹을 만드는 일이 재밌어서 즐겁게 일하고 있습니다.</p>
                 <p>주로 HTML, CSS, Javascript, jQuery를 사용하고, 웹표준과 반응형, 크로스브라우징을 고려한 웹 페이지를 그려냅니다.<br />
-                부족한 부분이 있다면 채우기 위해 노력하고 공부합니다. 개인적으로 Sass와 Vue.js에 관심이 생겨서 포폴 틍에 사용해보며 습득 중에 있습니다.</p>
+                부족한 부분이 있다면 채우기 위해 노력하고 공부합니다. 개인적으로 Sass와 Vue.js에 관심이 생겨서 포폴 등에 사용해보며 습득 중에 있습니다.</p>
                 <p>맡은 프로젝트의 목표를 우선적으로 생각하고 원활한 협업을 위해 열심히 소통하며 함께 만들어낼 결과물을 기대합니다.<br />늘 멋지고 즐거운 웹을 만들 수 있도록 생각하고 배우며 즐겁게 일하고자 합니다.</p>
             </div>
             <a class="about__more" href="https://puzzle-fold-9b2.notion.site/Web-Publisher-ec22c2d5e5f54bc0acca36a6ee3efd61?pvs=4" target="_blank">자기소개 더보기</a>
@@ -70,9 +83,10 @@
             <div class="work__item" data-aos="fade-up"></div>
             <div class="work__item" data-aos="fade-up"></div>
             <div class="work__item" data-aos="fade-up"></div>
-            <div class="work__item" data-aos="fade-up"></div>
-            <a class="work__more" data-aos="fade-up" href="https://puzzle-fold-9b2.notion.site/0f5664fc25694feda2b2d6838ac2839e?v=bd6e1903fa8f4838a8d0fbe9c320c190&pvs=4" target="_blank">프로젝트 더보기</a>
+            
         </div>
+        <!-- 더보기 버튼 -->
+        <a class="work__more" data-aos="fade-up" href="https://puzzle-fold-9b2.notion.site/0f5664fc25694feda2b2d6838ac2839e?v=bd6e1903fa8f4838a8d0fbe9c320c190&pvs=4" target="_blank">프로젝트 더보기</a>
     </section>
 
     <footer class="footer">
@@ -80,6 +94,7 @@
             <div class="footer__copyright"><span>Made by Song.</span><br />(C)2023 Portfolio.</div>
         </div>
     </footer>
+
 
     <!-- import aos script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
