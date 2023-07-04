@@ -216,7 +216,7 @@ body {
   font-weight: 600;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1020px) {
   .header .header__inner {
     width: 100%;
   }
@@ -281,7 +281,7 @@ body {
     width: 100%;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .header .header__inner {
     width: 100%;
   }
