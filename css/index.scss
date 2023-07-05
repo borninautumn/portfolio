@@ -145,60 +145,65 @@ body {
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
-    }
 
-    .scroll__circle {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 45px;
-        height: 45px;
-        border: 2px solid #c0cad6;
-        border-radius: 50%;
-
-        .arrow {
-            width: 20px;
-            height: 20px;
+        .scroll__circle {
+            margin-bottom: 8px;
             position: absolute;
-            top: 50%;
+            bottom: 20px;
             left: 50%;
-            transform: translate(-50%, -50%);
-            animation: arrowAni 1s infinite;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            border: 2px solid #c0cad6;
             border-radius: 50%;
-
-            &:before,
-            &:after {
-                content: '';
-                width: 1.5px;
+    
+            .arrow {
+                width: 20px;
                 height: 20px;
-                background: #c0cad6;
                 position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: arrowAni 1s infinite;
+                border-radius: 50%;
+    
+                &:before,
+                &:after {
+                    content: '';
+                    width: 1.5px;
+                    height: 20px;
+                    background: #c0cad6;
+                    position: absolute;
+                }
+    
+                &:before {
+                    top: 0;
+                    left: 3px;
+                    transform: rotate(-45deg);
+                }
+    
+                &:after {
+                    top: 0;
+                    right: 3px;
+                    transform: rotate(45deg);
+                }
             }
-
-            &:before {
-                top: 0;
-                left: 3px;
-                transform: rotate(-45deg);
-            }
-
-            &:after {
-                top: 0;
-                right: 3px;
-                transform: rotate(45deg);
+    
+            @keyframes arrowAni {
+                to {
+                    top: 60%;
+                }
             }
         }
 
-        @keyframes arrowAni {
-            to {
-                top: 60%;
-            }
+        .scroll__down {
+            color: #c0cad6;
         }
     }
 
-    .scroll__down {
-        color: #c0cad6;
-    }
+    
+
+    
 }
 
 // about css
@@ -364,8 +369,26 @@ body {
     .work {
         padding-left: 25px;
         padding-right: 25px;
+
         .work__inner {
-            width: 100%;
+            padding: 0;
+        }
+        
+        .card {
+            height: 350px;
+
+            &:nth-child(1n) {
+                flex: 100%;
+                margin: 15px 0;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -409,10 +432,8 @@ body {
         padding-right: 20px;
 
         .work__inner {
-            width: 100%;
+            padding: 0;
         }
-
-        
     }
 }
 
@@ -455,7 +476,7 @@ body {
         padding-right: 15px;
 
         .work__inner {
-            width: 100%;
+            padding: 0;
         }
     }
 }

@@ -93,7 +93,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-.visual .scroll__circle {
+.visual .visual__scroll .scroll__circle {
+  margin-bottom: 8px;
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -103,7 +104,7 @@ body {
   border: 2px solid #c0cad6;
   border-radius: 50%;
 }
-.visual .scroll__circle .arrow {
+.visual .visual__scroll .scroll__circle .arrow {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -113,19 +114,19 @@ body {
   animation: arrowAni 1s infinite;
   border-radius: 50%;
 }
-.visual .scroll__circle .arrow:before, .visual .scroll__circle .arrow:after {
+.visual .visual__scroll .scroll__circle .arrow:before, .visual .visual__scroll .scroll__circle .arrow:after {
   content: "";
   width: 1.5px;
   height: 20px;
   background: #c0cad6;
   position: absolute;
 }
-.visual .scroll__circle .arrow:before {
+.visual .visual__scroll .scroll__circle .arrow:before {
   top: 0;
   left: 3px;
   transform: rotate(-45deg);
 }
-.visual .scroll__circle .arrow:after {
+.visual .visual__scroll .scroll__circle .arrow:after {
   top: 0;
   right: 3px;
   transform: rotate(45deg);
@@ -135,7 +136,7 @@ body {
     top: 60%;
   }
 }
-.visual .scroll__down {
+.visual .visual__scroll .scroll__down {
   color: #c0cad6;
 }
 
@@ -291,7 +292,20 @@ body {
     padding-right: 25px;
   }
   .work .work__inner {
-    width: 100%;
+    padding: 0;
+  }
+  .work .card {
+    height: 350px;
+  }
+  .work .card:nth-child(1n) {
+    flex: 100%;
+    margin: 15px 0;
+  }
+  .work .card:first-child {
+    margin-top: 0;
+  }
+  .work .card:last-child {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 768px) {
@@ -325,7 +339,7 @@ body {
     padding-right: 20px;
   }
   .work .work__inner {
-    width: 100%;
+    padding: 0;
   }
 }
 @media (max-width: 480px) {
@@ -359,7 +373,7 @@ body {
     padding-right: 15px;
   }
   .work .work__inner {
-    width: 100%;
+    padding: 0;
   }
 }
 .blind {
